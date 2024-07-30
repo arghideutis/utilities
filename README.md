@@ -3,5 +3,5 @@
 ### Docker installation
 
 ```
-curl https://github.com/arghideutis/utilities/raw/main/docker/setup.sh | bash
+curl -s https://raw.githubusercontent.com/arghideutis/utilities/main/docker/setup.sh | bash
 ```
