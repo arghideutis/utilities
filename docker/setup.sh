@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BASEURL=$(dirname $0)
-echo $BASEURL
+echo "BASEURL: $BASEURL"
 
 if command -v docker > /dev/null
 then
