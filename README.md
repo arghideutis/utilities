@@ -1,5 +1,7 @@
 # Single line command utils
 
-### Docker setup
+### Docker installation
 
-TODO
+```
+curl https://github.com/arghideutis/utilities/raw/main/docker/setup.sh | -
+```
