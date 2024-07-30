@@ -17,3 +17,5 @@ if [ ! -f ${SCRIPT_PATH} ]; then
 fi
 
 curl ${SCRIPT_PATH} | bash
+
+echo Done, now please reboot or logout/login again.
