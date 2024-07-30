@@ -1,7 +1,6 @@
 #!/bin/bash
 
-BASEURL=$(dirname $0)
-echo "BASEURL: $BASEURL"
+BASEURL=https://github.com/arghideutis/utilities/raw/main/docker/
 
 if command -v docker > /dev/null
 then
