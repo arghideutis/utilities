@@ -9,9 +9,9 @@ then
 fi
 
 DISTRO=$(cat /etc/*-release | grep DISTRIB_ID | awk -F '=' '{print tolower($2)}')
-SCRIPT_PATH=./${BASEURL}/${DISTRO}.sh
+SCRIPT_URL=${BASEURL}/${DISTRO}.sh
 
-status=$(curl --head --silent ${SCRIPT_PATH} | head -n 1)
+status=$(curl --head --silent ${SCRIPT_URL} | head -n 1)
 
 if echo "$status" | grep -q 404; 
 then
@@ -19,6 +19,6 @@ then
    exit -1
 fi
 
-curl ${SCRIPT_PATH} | bash
+curl -s ${SCRIPT_URL} | bash
 
 echo Done, now please reboot or logout/login again.
