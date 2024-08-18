@@ -11,7 +11,10 @@ fi
 DISTRO=$(cat /etc/*-release | grep DISTRIB_ID | awk -F '=' '{print tolower($2)}')
 SCRIPT_PATH=./${BASEURL}/${DISTRO}.sh
 
-if ! curl --head --silent --fail ${SCRIPT_PATH} 2> /dev/null; then
+if curl --head --silent --fail ${SCRIPT_PATH} 2> /dev/null; 
+then
+    echo "Distro: ${DISTRO}"
+else
    echo "Distro not supported: ${DISTRO}"
    exit -1
 fi
