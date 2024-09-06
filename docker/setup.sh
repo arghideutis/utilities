@@ -8,7 +8,7 @@ then
     exit 0
 fi
 
-DISTRO=$(cat /etc/*-release | grep DISTRIB_ID | awk -F '=' '{print tolower($2)}')
+DISTRO=$(cat /etc/*-release | grep DISTRIB_CODENAME | awk -F '=' '{print tolower($2)}')
 SCRIPT_URL=${BASEURL}/${DISTRO}.sh
 
 status=$(curl --head --silent ${SCRIPT_URL} | head -n 1)
